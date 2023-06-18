@@ -1,6 +1,7 @@
 import React from 'react'
+import "./Footer.scss"
 
-const register = () => {
+const footer = () => {
   return (
     <div>
       
@@ -8,4 +9,4 @@ const register = () => {
   )
 }
 
-export default register
+export default footer
