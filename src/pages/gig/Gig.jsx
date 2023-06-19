@@ -25,6 +25,7 @@ function Gig() {
               <span>5</span>
             </div>
           </div>
+
           <Slider slidesToShow={1} arrowsScroll={1} className="slider">
             <img
               src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
@@ -39,6 +40,7 @@ function Gig() {
               alt=""
             />
           </Slider>
+
           <h2>About This Gig</h2>
           <p>
             I use an AI program to create images based on text prompts. This
@@ -55,6 +57,7 @@ function Gig() {
             found nowhere else. If you have any questions you're more than
             welcome to send me a message.
           </p>
+          
           <div className="seller">
             <h2>About The Seller</h2>
             <div className="user">
