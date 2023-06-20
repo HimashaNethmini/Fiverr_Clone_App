@@ -52,6 +52,8 @@ const Message = () => {
             </p>
           </div>
 
+          {/*third set of message */}
+
           <div className="item">
             <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
             <p>
@@ -72,7 +74,7 @@ const Message = () => {
             </p>
           </div>
 
-          {/*second set of message */}
+          {/*fourth set of message */}
 
           <div className="item">
             <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
