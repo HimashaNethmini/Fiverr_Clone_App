@@ -22,6 +22,11 @@ console.log("Connected to Mongo DB");
 
 }
 app.use("/api/users", userRoute);
+app.use("/api/gigs",GigRoute);
+app.use("/api/messages",MessageRoute);
+app.use("/api/conversations",ConversationRoute);
+app.use("/api/orders",OrderRoute);
+app.use("/api/reviews",ReviewRoute);
 
 
 
