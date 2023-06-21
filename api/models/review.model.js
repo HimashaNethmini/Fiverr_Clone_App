@@ -14,7 +14,7 @@ const ReviewSchema = new Schema(
     star: {
       type: Number,
       required: true,
-      enum:[1,2,3,4,5]
+      enum:[1,2,3,4,5] //only 1-5 numbers are allowed
     },
     desc: {
       type: String,
