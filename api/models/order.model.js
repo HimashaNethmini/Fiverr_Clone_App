@@ -29,7 +29,7 @@ const OrderSchema = new Schema(
     },
     isCompleted: {
       type: Boolean,
-      default: false,
+      default: false, //why ? cause buyer needs to pay, order to be completed
     },
     payment_intent: {
       type: String,
