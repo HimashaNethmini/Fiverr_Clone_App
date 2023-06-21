@@ -7,6 +7,7 @@ import GigRoute from "./routes/gig.route.js";
 import MessageRoute from "./routes/message.route.js";
 import OrderRoute from "./routes/order.route.js";
 import ReviewRoute from "./routes/review.route.js";
+import AuthRoute from "./routes/auth.route.js";
 
 
 const app =express();
@@ -21,12 +22,14 @@ console.log("Connected to Mongo DB");
 }
 
 }
+app.use("/api/auth",AuthRoute);
 app.use("/api/users", userRoute);
 app.use("/api/gigs",GigRoute);
 app.use("/api/messages",MessageRoute);
 app.use("/api/conversations",ConversationRoute);
 app.use("/api/orders",OrderRoute);
 app.use("/api/reviews",ReviewRoute);
+
 
 
 
