@@ -1,6 +1,12 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from 'dotenv';
+import userRoute from "./routes/user.route.js";
+import ConversationRoute from "./routes/conversation.route.js";
+import GigRoute from "./routes/gig.route.js";
+import MessageRoute from "./routes/message.route.js";
+import OrderRoute from "./routes/order.route.js";
+import ReviewRoute from "./routes/review.route.js";
 
 
 const app =express();
@@ -15,7 +21,7 @@ console.log("Connected to Mongo DB");
 }
 
 }
-
+app.use("/api/users", userRoute);
 
 
 
