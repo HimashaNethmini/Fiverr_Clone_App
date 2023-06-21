@@ -60,7 +60,7 @@ const GigSchema = new Schema(
       required: true,
     },
     features: {
-      type: [String],
+      type: [String], //taking as an array
       required: false,
     },
     sales: {
