@@ -52,7 +52,7 @@ export const register = async (req, res, next) => {
   
   export const logout = async (req, res) => {
     res
-      .clearCookie("accessToken", {
+      .clearCookie("accessToken", { //clear cookie when logging out
         sameSite: "none",
         secure: true,
       })
