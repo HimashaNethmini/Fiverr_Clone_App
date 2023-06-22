@@ -36,6 +36,13 @@ app.use("/api/conversations",conversationRoute);
 app.use("/api/orders",orderRoute);
 app.use("/api/reviews",reviewRoute);
 
+//error handling middleware
+app.use((err,req,res,next) =>{
+    const errorStatus = err.status || 500
+    const errorMessage = err.message || "Something went wrong !"
+
+    return res.status(errorStatus).send(errorMessage);
+});
 
 app.listen(8800, ()=>{
     connect();
