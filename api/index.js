@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from 'dotenv';
 import cookieParser from "cookie-parser";
+import cors from "cors";
 import userRoute from "./routes/user.route.js";
 import conversationRoute from "./routes/conversation.route.js";
 import gigRoute from "./routes/gig.route.js";
@@ -25,6 +26,7 @@ const connect = async() =>{
 
 };
 
+app.use(cors({ origin: "http://localhost:5173", credential:true }));
 app.use(express.json());
 app.use(cookieParser()); //to authorize n authenticate users
 
