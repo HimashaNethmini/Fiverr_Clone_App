@@ -36,7 +36,7 @@ export const deleteGig = async (req, res,next) =>{
 
 };
 
-//retrieve function
+//retrieve function single gig
 export const getGig = async (req, res, next) => {
     try {
       const gig = await Gig.findById(req.params.id);
@@ -46,6 +46,8 @@ export const getGig = async (req, res, next) => {
       next(err);
     }
   };
+
+  //retrieve all gigs
   export const getGigs = async (req, res, next) => {
     const q = req.query;
     const filters = {
