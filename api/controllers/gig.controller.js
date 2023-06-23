@@ -1,3 +1,4 @@
+import gigModel from "../models/gig.model.js";
 import Gig from "../models/gig.model.js";
 import createError from "../utils/createError.js";
 
@@ -24,8 +25,9 @@ export const createGig = async (req, res,next) =>{
 //delete function
 export const deleteGig = async (req, res,next) =>{
     try{
-        const gig = await Gig.findById(rrq.params.id);
-        if (gig.userId ! == req.userId)
+        //find gig in the db using id
+        const gig = await Gig.findById(req.params.id);
+        if (gig.userId !== req.userId)
             return next (createError(403, "You can delete only your gigs"));
 
         await Gig.findByIdAndDelete(req.params.id);
