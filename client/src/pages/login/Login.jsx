@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import "./Login.scss"
 import { useNavigate } from "react-router-dom";
-//import newRequest from "../../utils/newRequest";
+import newRequest from "../../utils/newRequest";
 
 function Login() {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState(""); //create state hooks
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
 
@@ -32,13 +32,19 @@ function Login() {
           placeholder='Himasha Nethmini' 
           onChange={(e) => setUsername(e.target.value)}
           />
-          
+
+          <label htmlFor="">Password</label>
+          <input 
+            name="password"
+            type="text"
+            onChange={ (e) => setPassword (e.target.value)}
+          />
+          <button type="submit">Login</button>
+          {error && error}
+
       </form>
     </div>
-  )
+  );
 }
 
-
-
-
-export default Login
+export default Login;
